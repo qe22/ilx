@@ -5,9 +5,7 @@
 <template>
     <!-- 一级路由组件 -->
     <router-view></router-view>
-    <div class="text">
-        tess
-    </div>
+
 </template>
 
 <style scoped lang="scss">
