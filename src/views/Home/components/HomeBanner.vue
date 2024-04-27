@@ -8,6 +8,8 @@ const grtBanner = async () => {
     BannerList.value = res.result
 }
 onMounted(() => grtBanner())
+
+
 </script>
 
 
