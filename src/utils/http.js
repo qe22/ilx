@@ -1,4 +1,5 @@
 import axios from "axios";
+import { ElMessage } from "element-plus";
 //axios基础封装
 const hpptInstance = axios.create({
   baseURL: "http://pcapi-xiaotuxian-front-devtest.itheima.net",
@@ -17,7 +18,12 @@ hpptInstance.interceptors.request.use(
 hpptInstance.interceptors.response.use(
   (res) => res.data,
   (e) => {
+    ElMessage({
+      type: "warning",
+      message: e.response.data.message,
+    });
     return Promise.reject(e);
+    //统一错误提示
   }
 );
 
